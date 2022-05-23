@@ -7,8 +7,15 @@
 var tab_identity = [];
 //Ciblage du bouton pour tirer la carte d'identité
 var btn_identity = document.querySelector(".btn_identity");
+
+var btn_submit = document.querySelector(".btn_submit");
 //Ciblage de la classe de la carte d'identité
 const selectionClass = document.querySelectorAll(".identity__box--el");
+//Ciblage des classes input
+const inputname = document.querySelector(".inputname");
+const inputsurname = document.querySelector(".inputsurname");
+const inputage = document.querySelector(".inputage");
+const inputnotice = document.querySelector(".inputnotice");
 
 //  -Importation du Json dans un tableau-  //
 fetch("./assets/json/json.json")
@@ -31,7 +38,7 @@ btn_identity.addEventListener("click", (e)=>{
   //Prise du dernier élément du tableau
   var identity = tab_identity.length-1;
   console.log(identity); //à supprimer
-  //
+  //Insertion des données de la carte d'identité dans le tableau 
   var tab_identitycard = [tab_identity[0].name,tab_identity[0].birthday,tab_identity[0].phone,tab_identity[0].zip,tab_identity[0].city,tab_identity[0].email,];
   //Ecriture dans l'Html des données du Json
   for (let i=0; i<selectionClass.length; i++){
@@ -39,10 +46,23 @@ btn_identity.addEventListener("click", (e)=>{
   }
 
   }
-)
+);
+
+btn_submit.addEventListener("click", (e)=>{
+  e.preventDefault();
+
+  tab_identity.push({
+    name: inputname.value, surname: inputsurname.value, age: inputage.value, notice: inputnotice.value
+  });
+
+  console.log(tab_identity); //à supprimer
+})
+
 
 //  -Fonction-  //
 //Fonction random
 function shuffleArray(inputArray){
   inputArray.sort(()=> Math.random() - 0.5);
 }   
+
+
