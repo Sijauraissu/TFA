@@ -2,12 +2,17 @@
 
 /*   --Carte identité--   */
 
+let localLinks = JSON.parse(localStorage.getItem('Avis'));
+console.log(localLinks);
+
 //  -Variables/Constante-  //
 // Variable tableau pour les cartes d'identité
 var tab_identity = [];
+
+var storage = [];
 //Ciblage du bouton pour tirer la carte d'identité
 var btn_identity = document.querySelector(".btn_identity");
-
+//Ciblage du bouton pour valider son avis
 var btn_submit = document.querySelector(".btn_submit");
 //Ciblage de la classe de la carte d'identité
 const selectionClass = document.querySelectorAll(".identity__box--el");
@@ -25,6 +30,10 @@ fetch("./assets/json/json.json")
         for (let i=0; i<text.Profil.length; i++){
           tab_identity.push(text.Profil[i]);
           console.log(tab_identity); //à supprimer
+        }
+        //
+        if(localLinks != null){
+          tab_identity.push(localLinks[0]);
         }
       }
     );
@@ -48,14 +57,24 @@ btn_identity.addEventListener("click", (e)=>{
   }
 );
 
+//  -Bouton ajout avis-  //
 btn_submit.addEventListener("click", (e)=>{
+  //Ici our éviter de recharger la page
   e.preventDefault();
-
+  //Ajouts de l'avis de l'utilisateur dans le tableau identity
   tab_identity.push({
     name: inputname.value, surname: inputsurname.value, age: inputage.value, notice: inputnotice.value
   });
 
   console.log(tab_identity); //à supprimer
+
+  storage.push({
+    name: inputname.value, surname: inputsurname.value, age: inputage.value, notice: inputnotice.value
+  });
+  console.log(storage); //à supprimer
+  localStorage.setItem("Avis",JSON.stringify(storage));
+  //clean du formulaire
+  clearForm();
 })
 
 
@@ -65,4 +84,10 @@ function shuffleArray(inputArray){
   inputArray.sort(()=> Math.random() - 0.5);
 }   
 
-
+//Fonction de clear du formulaire
+function clearForm() {
+  inputname.value = "";
+  inputsurname.value = "";
+  inputage.value = "";
+  inputnotice.value = "";
+}
