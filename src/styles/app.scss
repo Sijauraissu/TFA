@@ -1,7 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap');
 
 /*VARIABLES*/
 :root {
@@ -9,5 +9,16 @@
     --color-textprinc: #010101;
     --color-textsecond: #F9F9F9;
     --color-secondary: #0FA6B1;
-    --color-tertiary: #fff;
+}
+
+html{
+    color: var(--color-bg);
+}
+
+body{
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--color-text);
 }
