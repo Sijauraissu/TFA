@@ -91,3 +91,4 @@ function clearForm() {
   inputage.value = "";
   inputnotice.value = "";
 }
+
