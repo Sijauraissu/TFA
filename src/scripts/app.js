@@ -48,7 +48,7 @@ btn_identity.addEventListener("click", (e)=>{
   var identity = tab_identity.length-1;
   console.log(identity); //à supprimer
   //Insertion des données de la carte d'identité dans le tableau 
-  var tab_identitycard = [tab_identity[0].name,tab_identity[0].birthday,tab_identity[0].phone,tab_identity[0].zip,tab_identity[0].city,tab_identity[0].email,];
+  var tab_identitycard = [tab_identity[0].name,tab_identity[0].surname,tab_identity[0].notice,];
   //Ecriture dans l'Html des données du Json
   for (let i=0; i<selectionClass.length; i++){
     selectionClass[i].innerHTML = tab_identitycard[i];
@@ -63,13 +63,13 @@ btn_submit.addEventListener("click", (e)=>{
   e.preventDefault();
   //Ajouts de l'avis de l'utilisateur dans le tableau identity
   tab_identity.push({
-    name: inputname.value, surname: inputsurname.value, age: inputage.value, notice: inputnotice.value
+    name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
   });
 
   console.log(tab_identity); //à supprimer
 
   storage.push({
-    name: inputname.value, surname: inputsurname.value, age: inputage.value, notice: inputnotice.value
+    name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
   });
   console.log(storage); //à supprimer
   localStorage.setItem("Avis",JSON.stringify(storage));

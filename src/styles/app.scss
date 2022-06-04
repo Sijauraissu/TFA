@@ -66,27 +66,62 @@ body{
     margin-top: 10px;
 }
 
+.benefics{
+    margin: 30px;
+    font-size: 26px;
+
+    color: var(--color-textsecond);
+
+    &__subtitle{
+        margin-top: 80px;
+    }
+
+    &__text{
+        font-size: 18px;
+    }
+}
+
 .identity{
     background-color: var(--color-textsecond);
     margin: 0 auto;
     width: 242px;
     height: 388px;
     border-radius: 7%;
+    position: relative;
 
     &__box{
         list-style-type: none;
 
         &--img{
-            margin-left: 60%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            // z-index: auto;
+
+            overflow: hidden;
+            text-indent:100%;
+
+            height: 70px;
+            width: 70px;
+            background-image: url(../assets/images/Carré.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transform: rotate(180deg);
         }
 
         &--el{
             margin-top: 30px;
+            margin: 15px;
+            // z-index: 1;
         }
 
         &--el:nth-child(-n+2){
             display : inline-block;
             font-size: 18px;
+            margin: 0px;
+            margin-top: 45px;
+   
         }
 
         &--el:last-child{
