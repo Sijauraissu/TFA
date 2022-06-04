@@ -22,7 +22,7 @@
 
 
     <div class="intro">
-      <p class="intro__text">Né d’un projet fou d’étudiant, Eldwis a est un moyen de lutter contre un problème générationnel qui touche de plus en plus de monde.</p>
+      <p class="intro__text">Né d’un projet fou d’étudiant, Eldwis est un moyen de lutter contre un problème générationnel qui touche de plus en plus de monde.</p>
       <p class="intro__text">La fracture sociale !</p>
       <img class="intro__img" src="/assets/images/Carré.svg" alt="">
     </div>
@@ -36,10 +36,12 @@
 
   <section class="benefics">
     <h2 class="benefics__subtitle">Le numérique, ça vous dépasse ?</h2>
-    <p class="benefics__text">Vous souffrez peut-être de ce qu’on appelle aujourd’hui la fracture numérique.</p>
-    <p class="benefics__text">Mais pas de panique, Eldwis est là pour ça. Eldwis, c’est un service gratuit qui a pour but de venir en aide au personne en difficulté numérique.</p>
+    <p class="benefics__text">Vous souffrez peut-être de ce qu’on appelle la fracture numérique.</p>
+    <p class="benefics__text">Mais pas de panique, Eldwis est là pour ça. Eldwis, c’est un service gratuit qui a pour but de venir en aide au personne en difficulté numérique. Des consultants expérimentés mettent leur savoir à votre disposition. Il vous suffit de vous inscrire via un petit formulaire et un de nos conseiller se rendra chez vous pour vous aider à metter en place une aide et vous expliquer son fonctionnement. </p>
+    <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
+
     <h2 class="benefics__subtitle">Ne passez pas à coté </h2>
-    <p class="benefics__text">Le numérique offre aujourd’hui bien des avantages. Actualités, communication, accèssibilité. </p>
+    <p class="benefics__text">Le numérique offre bien des avantages. Parler avec ses proches lorsque ceux-ci sont loins, pouvoir connaître en un instant tout ce que vous voulez </p>
     <p class="benefics__text">Le numérique permet aujourd’hui de faire des choses impossibles encore hier, alors pourquoi s’en priver ? </p>
   </section>
 
@@ -49,36 +51,40 @@
 
     <div class="slider">
       <div class="slider__slides">
-        <div class="slider__slides--img"><img src="/assets/images/Bifurquay.svg" alt=""></div>
-        <div class="slider__slides--img"><img src="/assets/images/Bourgal.svg" alt=""></div>
-        <div class="slider__slides--img"><img src="/assets/images/Merranova.svg" alt=""></div>
+        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="notice">
     <h2>Avis sur le prototype</h2>
-    <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Tester le prototype</a>
+
+    <div class="identity">
+      <ul class="identity__box">
+        <li class="identity__box--el">Schmit</li>
+        <li class="identity__box--el">Maxime</li>
+        <li class="identity__box--el">Je trouve que Eldwis est vraiment chouette. Permettre aux gens volontaires d'aider c'est toujours une bonne idée. Personnellement j'aime beaucoup la direction artistique du site. C'est assez minimaliste et simple pour que se soit facile à comprendre. </li>
+      </ul>
+      <span class="identity__box--img">content</span>
+    </div>
+    <button class="btn_identity">Avis aléatoire</button>
   </section>
 
-
-  <div class="identity">
-    <ul class="identity__box">
-      <li class="identity__box--el">Schmit</li>
-      <li class="identity__box--el">Maxime</li>
-      <li class="identity__box--el">Je trouve que Eldwis est vraiment chouette. Permettre aux gens volontaires d'aider c'est toujours une bonne idée </li>
-    </ul>
-    <span class="identity__box--img">content</span>
-  </div>
-
-  <button class="btn_identity">Bouton</button>
-
   <section>
-    <div>
-      <form action="">
-        <input type="text" class="inputname" required>
-        <input type="text" class="inputsurname" required>
-        <textarea cols="30" rows="10" class="inputnotice" required></textarea>
+    <p>Vous désirez tester le prototype de Eldwis ?</p>
+    <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Tester le prototype</a>
+
+    <h2>Donner votre avis</h2>
+
+    <div class="form__container">
+      <form class="form" action="">
+        <div class="classsurladiv">
+          <input type="text" class="form__input form__input--name inputname" required>
+          <input type="text" class="form__input form__input--surname inputsurname" required>
+        </div>
+        <textarea class="form__input form__input--notice inputnotice" required></textarea>
         <input type="submit" class="btn_submit">
       </form>
     </div>

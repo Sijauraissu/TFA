@@ -8,6 +8,7 @@
     --color-bg: #375E70;
     --color-textprinc: #010101;
     --color-textsecond: #F9F9F9;
+    --color-textthird: #375E70;
     --color-secondary: #0FA6B1;
 }
 
@@ -79,6 +80,10 @@ body{
     &__text{
         font-size: 18px;
     }
+
+    &__img{
+        width: 100%;
+    }
 }
 
 .identity{
@@ -122,10 +127,6 @@ body{
             margin-top: 40px;
    
         }
-
-        // &--el:last-child{
-        //     margin-right : 15px;
-        // }
     }
 
 
@@ -137,13 +138,13 @@ body{
     overflow: hidden;
     margin: 20px auto;
 
-
     &__slides{
         width: calc(320px * 3);
-        animation: slide 39s infinite;
+        animation: slide 10s infinite;
     
         &--img{
             float: left;
+            width: 320px;
         }
     }
 }
@@ -170,4 +171,51 @@ body{
     100%{
         transform: translateX(0px);
     }
+}
+
+.notice{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn_identity{
+    height: 45px;
+    width: 242px;
+    border: var(--color-bg) solid 3px;
+    border-radius: 10px;
+    color: var(--color-textthird);
+    background-color: var(--color-textsecond);
+    cursor: pointer;
+
+
+    position: relative;
+    margin: 30px auto 30px;
+}
+
+.formcontainer{
+    margin: 20px;
+}
+
+.form{
+
+    &__input{
+
+        width: 130px;
+        height: 20px;
+
+        &--notice{
+            width: 90%;
+            padding: 0;
+            border: none;
+            margin-top: 20px;
+            height: 100px;
+        }
+    }
+
+    .classsurladiv{
+        display: inline-flex;
+        justify-content: space-between; 
+    }
+
 }
