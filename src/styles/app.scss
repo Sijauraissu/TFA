@@ -54,8 +54,8 @@ body{
 
     &__img{
         position: absolute;
-        margin-left: -100px;
-        margin-top: -90px;
+        left: -100px;
+        top: 70px;
     }
 }
 
@@ -91,12 +91,13 @@ body{
 
     &__box{
         list-style-type: none;
+        padding-inline-start: 15px;
 
         &--img{
             position: absolute;
             top: 10px;
             right: 10px;
-            // z-index: auto;
+
 
             overflow: hidden;
             text-indent:100%;
@@ -111,22 +112,20 @@ body{
         }
 
         &--el{
-            margin-top: 30px;
-            margin: 15px;
-            // z-index: 1;
+            margin: 30px 15px 15px 0px;
         }
 
         &--el:nth-child(-n+2){
             display : inline-block;
             font-size: 18px;
             margin: 0px;
-            margin-top: 45px;
+            margin-top: 40px;
    
         }
 
-        &--el:last-child{
-            margin-right : 15px;
-        }
+        // &--el:last-child{
+        //     margin-right : 15px;
+        // }
     }
 
 

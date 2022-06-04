@@ -88,7 +88,7 @@ function shuffleArray(inputArray){
 function clearForm() {
   inputname.value = "";
   inputsurname.value = "";
-  inputage.value = "";
   inputnotice.value = "";
 }
+
 
