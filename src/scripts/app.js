@@ -91,4 +91,11 @@ function clearForm() {
   inputnotice.value = "";
 }
 
+//Copyright
+let date = new Date();
+let year = date.getFullYear();
+
+let yr = document.querySelector(".copyright");
+yr.innerText = year;
+
 
