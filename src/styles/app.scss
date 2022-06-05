@@ -6,8 +6,8 @@
 /*VARIABLES*/
 :root {
     --color-bg: #375E70;
-    --color-textprinc: #010101;
-    --color-textsecond: #F9F9F9;
+    --color-textprinc: #F9F9F9;
+    --color-textsecond: #010101;
     --color-textthird: #375E70;
     --color-secondary: #0FA6B1;
 }
@@ -18,10 +18,18 @@ html{
 
 body{
     font-family: 'Tiro Devanagari Sanskrit', serif;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
-    color: var(--color-text);
+    color: var(--color-textprinc);
+
+    margin: 30px;
+}
+
+.subtitle{
+    font-size: 32px;
+    margin-top: 50px;
+
 }
 
 .block{
@@ -58,6 +66,10 @@ body{
         left: -100px;
         top: 70px;
     }
+
+    &__text{
+        font-size: 15px;
+    }
 }
 
 .video__trailer {
@@ -68,18 +80,6 @@ body{
 }
 
 .benefics{
-    margin: 30px;
-    font-size: 26px;
-
-    color: var(--color-textsecond);
-
-    &__subtitle{
-        margin-top: 80px;
-    }
-
-    &__text{
-        font-size: 18px;
-    }
 
     &__img{
         width: 100%;
@@ -87,12 +87,14 @@ body{
 }
 
 .identity{
-    background-color: var(--color-textsecond);
+    background-color: var(--color-textprinc);
     margin: 0 auto;
     width: 242px;
     height: 388px;
     border-radius: 7%;
     position: relative;
+    font-size: 15px;
+    color: var(--color-textsecond);
 
     &__box{
         list-style-type: none;
@@ -185,7 +187,7 @@ body{
     border: var(--color-bg) solid 3px;
     border-radius: 10px;
     color: var(--color-textthird);
-    background-color: var(--color-textsecond);
+    background-color: var(--color-textprinc);
     cursor: pointer;
 
 
@@ -219,3 +221,42 @@ body{
     }
 
 }
+
+
+/*FOOTER*/
+.footer{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: var(--color-bg);
+
+    border-top: var(--color-text) 1px solid;
+}
+
+.links__footer{
+    color: var(--color-text);
+}
+
+
+.credits{
+    color: var(--color-text);
+}
+
+.menu2__navigation{
+    padding-bottom: 20px;
+}
+
+.menu2__ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.menu2__el{
+    padding-left: 20px;
+}
+
+.menu2__ul :nth-child(1){
+    padding-left: 0;
+}
+

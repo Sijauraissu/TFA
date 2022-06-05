@@ -35,18 +35,19 @@
   </section>
 
   <section class="benefics">
-    <h2 class="benefics__subtitle">Le numérique, ça vous dépasse ?</h2>
+    <h2 class="subtitle">Le numérique, ça vous dépasse ?</h2>
     <p class="benefics__text">Vous souffrez peut-être de ce qu’on appelle la fracture numérique.</p>
     <p class="benefics__text">Mais pas de panique, Eldwis est là pour ça. Eldwis, c’est un service gratuit qui a pour but de venir en aide au personne en difficulté numérique. Des consultants expérimentés mettent leur savoir à votre disposition. Il vous suffit de vous inscrire via un petit formulaire et un de nos conseiller se rendra chez vous pour vous aider à metter en place une aide et vous expliquer son fonctionnement. </p>
     <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
 
-    <h2 class="benefics__subtitle">Ne passez pas à coté </h2>
+    <h2 class="subtitle">Ne passez pas à coté </h2>
     <p class="benefics__text">Le numérique offre bien des avantages. Parler avec ses proches lorsque ceux-ci sont loins, pouvoir connaître en un instant tout ce que vous voulez </p>
     <p class="benefics__text">Le numérique permet aujourd’hui de faire des choses impossibles encore hier, alors pourquoi s’en priver ? </p>
+    <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
   </section>
 
   <section>
-    <h2>Des consultants à votre écoute</h2>
+    <h2 class="subtitle">Des consultants à votre écoute</h2>
     <p>Nos consultants, tous bénévoles, ont à coeur de vous permettre, vous aussi, de comprendre et d’utiliser les appareils numériques actuels</p>
 
     <div class="slider">
@@ -59,7 +60,7 @@
   </section>
 
   <section class="notice">
-    <h2>Avis sur le prototype</h2>
+    <h2 class="subtitle">Avis sur le prototype</h2>
 
     <div class="identity">
       <ul class="identity__box">
@@ -73,19 +74,32 @@
   </section>
 
   <section>
-    <p>Vous désirez tester le prototype de Eldwis ?</p>
-    <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Tester le prototype</a>
+    <p>Vous désirez tester le prototype de Eldwis ? <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Cliquez ici</a></p>
 
     <h2>Donner votre avis</h2>
 
     <div class="form__container">
       <form class="form" action="">
         <div class="classsurladiv">
-          <input type="text" class="form__input form__input--name inputname" required>
-          <input type="text" class="form__input form__input--surname inputsurname" required>
+
+          <label for="name">
+            <input id="name" type="text" class="form__input form__input--name inputname" required
+            placeholder="Nom">>
+          </label>
+
+          <label for="surname">
+            <input type="text" class="form__input form__input--surname inputsurname" required
+            placeholder="Prénom">
+          </label>
+
         </div>
-        <textarea class="form__input form__input--notice inputnotice" required></textarea>
-        <input type="submit" class="btn_submit">
+
+        <label for="notice">
+          <textarea class="form__input form__input--notice inputnotice" required
+          placeholder="Commentaires"></textarea>
+          <input type="submit" class="btn_submit">
+        </label>
+
       </form>
     </div>
   </section>
