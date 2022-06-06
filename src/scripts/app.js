@@ -58,7 +58,7 @@ btn_identity.addEventListener("click", (e)=>{
 );
 
 //  -Bouton ajout avis-  //
-btn_submit.addEventListener("click", (e)=>{
+btn_submit.addEventListener("submit", (e)=>{
   //Ici our éviter de recharger la page
   e.preventDefault();
   //Ajouts de l'avis de l'utilisateur dans le tableau identity
@@ -75,6 +75,8 @@ btn_submit.addEventListener("click", (e)=>{
   localStorage.setItem("Avis",JSON.stringify(storage));
   //clean du formulaire
   clearForm();
+
+  close();
 })
 
 
@@ -99,3 +101,16 @@ let yr = document.querySelector(".copyright");
 yr.innerText = year;
 
 
+
+
+
+var critics = document.querySelector(".critics");
+var closing = document.querySelector(".close");
+
+
+critics.addEventListener("click", close);
+closing.addEventListener("click", close);
+
+function close(){
+  document.querySelector(".popup").classList.toggle("removeblock");
+}

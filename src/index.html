@@ -18,6 +18,7 @@
 
 
   <section class="block">
+    <h1 class="hiddencontent">content</h1>
     <img class="logo" src="/assets/images/EldwisLogo.svg" alt="Logo Eldswis">
 
 
@@ -30,31 +31,45 @@
 
   <section class="video">
 
-    <iframe class="video__trailer" src="https://www.youtube.com/embed/9HA4zv0qw50?rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video__trailer" src="https://www.youtube.com/embed/9HA4zv0qw50?rel=0" allowfullscreen></iframe>
 
   </section>
 
   <section class="benefics">
+
     <h2 class="subtitle">Le numérique, ça vous dépasse ?</h2>
     <p class="benefics__text">Vous souffrez peut-être de ce qu’on appelle la fracture numérique.</p>
-    <p class="benefics__text">Mais pas de panique, Eldwis est là pour ça. Eldwis, c’est un service gratuit qui a pour but de venir en aide au personne en difficulté numérique. Des consultants expérimentés mettent leur savoir à votre disposition. Il vous suffit de vous inscrire via un petit formulaire et un de nos conseiller se rendra chez vous pour vous aider à metter en place une aide et vous expliquer son fonctionnement. </p>
-    <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
+
+    <div class="container">
+      <p class="benefics__text">Mais pas de panique, Eldwis est là pour ça. Eldwis, c’est un service gratuit qui a pour but de venir en aide au personne en difficulté numérique. Des consultants expérimentés mettent leur savoir à votre disposition. Il vous suffit de vous inscrire via un petit formulaire et un de nos conseiller se rendra chez vous pour vous aider à metter en place une aide et vous expliquer son fonctionnement. </p>
+      <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
+    </div>
+
 
     <h2 class="subtitle">Ne passez pas à coté </h2>
-    <p class="benefics__text">Le numérique offre bien des avantages. Parler avec ses proches lorsque ceux-ci sont loins, pouvoir connaître en un instant tout ce que vous voulez </p>
-    <p class="benefics__text">Le numérique permet aujourd’hui de faire des choses impossibles encore hier, alors pourquoi s’en priver ? </p>
-    <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
+
+    <div class="container">
+      <div>
+      <p class="benefics__text">Le numérique offre bien des avantages. Parler avec ses proches lorsque ceux-ci sont loins, pouvoir connaître en un instant tout ce que vous voulez </p>
+      <p class="benefics__text">Le numérique permet aujourd’hui de faire des choses impossibles encore hier, alors pourquoi s’en priver ? </p>
+      </div>
+      <img class="benefics__img" src="/assets/images/mockupvieux.png" alt="Image d'un écran avec le site Eldwis montré à une personne agée">
+    </div>
+
   </section>
 
-  <section>
+  <section class="tipsers">
     <h2 class="subtitle">Des consultants à votre écoute</h2>
-    <p>Nos consultants, tous bénévoles, ont à coeur de vous permettre, vous aussi, de comprendre et d’utiliser les appareils numériques actuels</p>
 
-    <div class="slider">
-      <div class="slider__slides">
-        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
-        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
-        <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+    <div class="container">
+      <p class="tipsers__text">Nos consultants, tous bénévoles, ont à coeur de vous permettre, vous aussi, de comprendre et d’utiliser les appareils numériques actuels</p>
+
+      <div class="slider">
+        <div class="slider__slides">
+          <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+          <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+          <img class="slider__slides--img" src="/assets/images/Merranova1x.png" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -77,45 +92,54 @@
     <p>Vous désirez tester le prototype de Eldwis ? <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Cliquez ici</a></p>
 
     <h2>Donner votre avis</h2>
-
-    <div class="form__container">
-      <form class="form" action="">
-        <div class="classsurladiv">
-
-          <label for="name">
-            <input id="name" type="text" class="form__input form__input--name inputname" required
-            placeholder="Nom">>
-          </label>
-
-          <label for="surname">
-            <input type="text" class="form__input form__input--surname inputsurname" required
-            placeholder="Prénom">
-          </label>
-
-        </div>
-
-        <label for="notice">
-          <textarea class="form__input form__input--notice inputnotice" required
-          placeholder="Commentaires"></textarea>
-          <input type="submit" class="btn_submit">
-        </label>
-
-      </form>
-    </div>
   </section>
 
+
+
+  <div class="popup removeblock">
+
+    <button class="close">&times;</button>
+
+    <div class="form__container">
+      <form class="form">
+        <div class="classsurladiv">
+
+            <label for="name">
+              <input id="name" type="text" class="form__input form__input--name inputname" required
+              placeholder="Nom">
+          </div>
+
+  
+          <label for="surname">
+            <input id="surname" type="text" class="form__input form__input--surname inputsurname" required
+            placeholder="Prénom">
+          </label>
+  
+        </div>
+  
+        <label for="notice">
+          <textarea id="notice" class="form__input form__input--notice inputnotice" required
+          placeholder="Commentaires"></textarea>
+        </label>
+        <input type="submit" class="btn_submit">
+  
+      </form>
+    </div>
+
+  </div>
+
+  <button class="critics">Donner son avis</button>
+
   <footer class="footer">
-    <section class="footer__navigation">
-      <nav>
+    <div class="footer__navigation">
           <ul class="menu__ul">
               <li class="menu__el">
                   <a class="links__footer" href="">Case Study</a>
               </li>
           </ul>
-      </nav>
-  </section>
+        </div>
 
-  <section class="footer__copyright">
+    <div class="footer__copyright">
       <p class="credits">
           <small class="small">©
               <span class="copyright"></span> 
@@ -123,7 +147,7 @@
               <a class="links__footer" href="http://dwm.re" target="blank">dwt</a>
           </small>
       </p>
-  </section>
+    </div>
   </footer>
 
 </body>
