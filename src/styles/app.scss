@@ -161,7 +161,7 @@ p{
 
     &__slides{
         width: calc(320px * 3);
-        animation: slide 10s infinite;
+        animation: slide 39s infinite;
     
         &--img{
             float: left;
@@ -239,7 +239,7 @@ p{
         }
     }
 
-    .classsurladiv{
+    .box{
         display: inline-flex;
         flex-direction: column;
         width: 100%;

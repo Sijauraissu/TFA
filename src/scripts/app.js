@@ -29,7 +29,7 @@ fetch("./assets/json/json.json")
       response.json().then((text) => {
         for (let i=0; i<text.Profil.length; i++){
           tab_identity.push(text.Profil[i]);
-          console.log(tab_identity); //à supprimer
+
         }
         //
         if(localLinks != null){
@@ -47,7 +47,7 @@ if(btn_identity){
     shuffleArray(tab_identity);
     //Prise du dernier élément du tableau
     var identity = tab_identity.length-1;
-    console.log(identity); //à supprimer
+
     //Insertion des données de la carte d'identité dans le tableau 
     var tab_identitycard = [tab_identity[0].name,tab_identity[0].surname,tab_identity[0].notice,];
     //Ecriture dans l'Html des données du Json
@@ -67,12 +67,12 @@ if(btn_submit){
       name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
     });
 
-    console.log(tab_identity); //à supprimer
+
 
     storage.push({
       name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
     });
-    console.log(storage); //à supprimer
+
     localStorage.setItem("Avis",JSON.stringify(storage));
     //clean du formulaire
     clearForm();
@@ -122,3 +122,30 @@ function close(){
 //Gsap
 
 import { gsap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".anim1",{ 
+  x:600,
+  opacity:0,
+  scrollTrigger: {
+      trigger:".anim1",
+      start: "0 75%",
+      end: "15% 30%",
+      toggleActions: "play pause reverse reset",
+      scrub: true,
+
+  }
+});
+
+gsap.from(".anim2",{ 
+  x:-600,
+  opacity:0,
+  scrollTrigger: {
+      trigger:".anim2",
+      start: "0 75%",
+      end: "15% 30%",
+      toggleActions: "play pause reverse reset",
+      scrub: true,
+  }
+});
