@@ -19,7 +19,7 @@
 
   <section class="block">
     <h1 class="hiddencontent">content</h1>
-    <img class="logo" src="/assets/images/EldwisLogo.svg" alt="Logo Eldswis">
+    <img class="logo" src="assets/images/Eldwis.svg" alt="Logo Eldswis">
 
 
     <div class="intro">
@@ -88,10 +88,10 @@
     <button class="btn_identity">Avis aléatoire</button>
   </section>
 
-  <section>
-    <p>Vous désirez tester le prototype de Eldwis ? <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470">Cliquez ici</a></p>
-
-    <h2>Donner votre avis</h2>
+  <section class="essais__container">
+    <p class="essais__text">Vous désirez tester le prototype de Eldwis ? </p>
+    <a href="https://www.figma.com/proto/lQBOpQtrc5ET0Brlca8ExB/TFA?page-id=9%3A72&node-id=506%3A1184&viewport=-5442%2C1232%2C0.25&scaling=min-zoom&starting-point-node-id=396%3A470" class="figma">Cliquez ici</a> 
+    <button class="critics">Donner son avis</button>
   </section>
 
 
@@ -103,32 +103,31 @@
     <div class="form__container">
       <form class="form">
         <div class="classsurladiv">
-
             <label for="name">
               <input id="name" type="text" class="form__input form__input--name inputname" required
               placeholder="Nom">
+            </label>
+              
+            <label for="surname">
+              <input id="surname" type="text" class="form__input form__input--surname inputsurname" required
+              placeholder="Prénom">
+            </label>
           </div>
-
-  
-          <label for="surname">
-            <input id="surname" type="text" class="form__input form__input--surname inputsurname" required
-            placeholder="Prénom">
+          
+          <label for="notice">
+            <textarea id="notice" class="form__input form__input--notice inputnotice" required
+            placeholder="Commentaires"></textarea>
           </label>
+          <input type="submit" class="btn_submit">
+
+          </div>
   
-        </div>
-  
-        <label for="notice">
-          <textarea id="notice" class="form__input form__input--notice inputnotice" required
-          placeholder="Commentaires"></textarea>
-        </label>
-        <input type="submit" class="btn_submit">
   
       </form>
     </div>
 
   </div>
 
-  <button class="critics">Donner son avis</button>
 
   <footer class="footer">
     <div class="footer__navigation">

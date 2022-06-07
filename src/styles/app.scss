@@ -22,7 +22,7 @@ html{
 }
 
 body{
-    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
@@ -33,7 +33,7 @@ body{
 
 .subtitle{
     font-size: 32px;
-    margin-top: 50px;
+    margin: 50px 0 36px;
 }
 
 p{
@@ -51,8 +51,7 @@ p{
 
 .logo{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50% auto;
     width: 80%;
     top: 98px;
 }
@@ -79,7 +78,6 @@ p{
     &__text{
         width: 80%;
         margin-left: 100%;
-        TRANSFORM: translateX;
         transform: translateX(-90%);
         font-size: 15px;
     }
@@ -103,13 +101,14 @@ p{
 
     &__img{
         width: 100%;
+        margin:18px 0;
     }
 }
 
 .identity{
     background-color: var(--color-textprinc);
     margin: 0 auto;
-    width: 242px;
+    width: 85%;
     height: 388px;
     border-radius: 7%;
     position: relative;
@@ -158,7 +157,7 @@ p{
 .slider{
     width: 320px;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 36px auto;
 
     &__slides{
         width: calc(320px * 3);
@@ -201,9 +200,10 @@ p{
     flex-direction: column;
 }
 
-.btn_identity{
+.btn_identity, .critics, .btn_submit{
+    font-family: 'Exo 2', sans-serif;
     height: 45px;
-    width: 242px;
+    width: 55%;
     border: var(--color-bg) solid 3px;
     border-radius: 10px;
     color: var(--color-textthird);
@@ -221,35 +221,69 @@ p{
 
 .form{
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &__input{
 
-        width: 130px;
-        height: 20px;
+        width: 100%;
+        height: 30px;
 
         &--notice{
-            width: 90%;
+            width: 300px;
             padding: 0;
             border: none;
             margin-top: 20px;
-            height: 100px;
+            height: 40vh;
         }
     }
 
     .classsurladiv{
         display: inline-flex;
-        justify-content: space-between; 
-    }
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        label{
+            width: 300px;
+            margin:8px;
+        }
+    } 
 
 }
 
+.close{
+    padding-right: 20px;
+    color: var(--color-textprinc);
+}
+
+.essais{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 36px auto;
+        color: var(--color-bg);
+        background-color: var(--color-textprinc);
+        border-radius: 7%;
+        max-width: 85%;
+        padding: 16px;
+    }
+    &__text{
+        text-align: center;
+        margin: 36px 0;
+    }
+}
+
 .popup {
-    background-color: #153474E6;
+    background-color: #375E70F2;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
     position: fixed;
-    padding: 18px;
+
 }
 
 .popup button{
@@ -279,13 +313,19 @@ p{
     border-top: var(--color-text) 1px solid;
 }
 
-.links__footer{
+.links__footer, .credits, .figma{
     color: var(--color-text);
+    transition: 0.5s;
 }
 
+.links__footer:hover, .credits:hover, .figma:hover{
+    text-decoration: none;
+    transition: 0.5s;
+}
 
-.credits{
-    color: var(--color-text);
+.figma{
+    font-size: 32px;
+    margin: 16px auto;
 }
 
 .menu__navigation{
@@ -302,6 +342,34 @@ p{
     padding-left: 0;
 }
 
+
+
+//Case Study
+.boxCS{
+    margin-left: 18px;
+}
+
+.title{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: var(--color-textprinc);
+}
+
+.text{
+    margin-top: 30px;
+
+}
+
+.img{
+    width: 100%;
+}
+
+.blockCS{
+    height: 40vh
+}
+
+
+
 @media (min-width: 736px){
 
     body{
@@ -313,7 +381,11 @@ p{
     }
 
     .logo{
-        margin-top: -150px;
+        margin: 25% auto 5%;
+    }
+
+    .video{
+        margin-top: 25%;
     }
 
     .intro{
@@ -343,7 +415,7 @@ p{
     .benefics{
 
         &__img{
-            width: 30%;
+            width: 40%;
             height: 30%;
         }
         
@@ -355,7 +427,11 @@ p{
 
     .container{
         display: flex;
-        flex-direction: row;
+        align-items: center;
+    }
+
+    .container:nth-of-type(even){
+        flex-direction: row-reverse;
     }
 
 
@@ -367,20 +443,104 @@ p{
             width: 50%;
         }
     }
+
+    .identity{
+        &__box{
+            list-style-type: none;
+            padding-inline-start: 15px;
+    
+            
+    
+            &--el{
+                margin: 30px 15px 15px 0px;
+                font-size: 18px;
+            }
+    
+            &--el:nth-child(-n+2){
+                display : inline-block;
+                font-size: 20px;
+                margin: 0px;
+                margin-top: 40px;
+       
+            }
+        }
+    
+    
+    }
+    
+    .btn_identity, .critics, .btn_submit{
+        font-size:18px;
+    }
+    
+
+    //Case Study
+
+    .boxCS{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text{
+        &--TFA{
+            margin-right: 10%;
+        }
+    }
+
+    .title{
+        &--TFA{
+            font-size: 56px;
+        }
+    }
+
+    .subtitleCS{
+        &--TFA{
+            font-size: 32px;
+        }
+    }
+
+    .img{
+        width: 50%;
+    }
+
+
 }
 
+@media(min-width:1024px){
+    .logo{
+        width: 45%;
+        margin: 10% auto 5%;
+    }
 
+    .video__trailer{
+        height: 80vh;
+    }
 
+    .identity, .essais__container{
+        width: 50%;
+    }
 
+    .btn_identity, .btn_submit{
+        width: 20%;
+    }
 
-.boxCS{
+    .benefics{
+        &__text{
+            width: 75%;
+            margin: 40px 80px;
+        }
+    }
 
-}
+    .tipsers{
+        &__text{
+            width: 30%;
+        }
+    }
 
-.title{
+    .img {
+        width: 25%;
+    }
 
-}
-
-.img{
-    width: 100%;
+    .TFA:first-of-type{
+        margin: 10% 0 0;
+    }
 }

@@ -40,44 +40,46 @@ fetch("./assets/json/json.json")
   }
 );  
 
-//  -Bouton carte identité-  //
-btn_identity.addEventListener("click", (e)=>{
-  //Random du tableau
-  shuffleArray(tab_identity);
-  //Prise du dernier élément du tableau
-  var identity = tab_identity.length-1;
-  console.log(identity); //à supprimer
-  //Insertion des données de la carte d'identité dans le tableau 
-  var tab_identitycard = [tab_identity[0].name,tab_identity[0].surname,tab_identity[0].notice,];
-  //Ecriture dans l'Html des données du Json
-  for (let i=0; i<selectionClass.length; i++){
-    selectionClass[i].innerHTML = tab_identitycard[i];
-  }
-
-  }
-);
-
-//  -Bouton ajout avis-  //
-btn_submit.addEventListener("submit", (e)=>{
-  //Ici our éviter de recharger la page
-  e.preventDefault();
-  //Ajouts de l'avis de l'utilisateur dans le tableau identity
-  tab_identity.push({
-    name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
+if(btn_identity){
+  //  -Bouton carte identité-  //
+  btn_identity.addEventListener("click", (e)=>{
+    //Random du tableau
+    shuffleArray(tab_identity);
+    //Prise du dernier élément du tableau
+    var identity = tab_identity.length-1;
+    console.log(identity); //à supprimer
+    //Insertion des données de la carte d'identité dans le tableau 
+    var tab_identitycard = [tab_identity[0].name,tab_identity[0].surname,tab_identity[0].notice,];
+    //Ecriture dans l'Html des données du Json
+    for (let i=0; i<selectionClass.length; i++){
+      selectionClass[i].innerHTML = tab_identitycard[i];
+    }
   });
+}
 
-  console.log(tab_identity); //à supprimer
+if(btn_submit){
+    //  -Bouton ajout avis-  //
+  btn_submit.addEventListener("submit", (e)=>{
+    //Ici our éviter de recharger la page
+    e.preventDefault();
+    //Ajouts de l'avis de l'utilisateur dans le tableau identity
+    tab_identity.push({
+      name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
+    });
 
-  storage.push({
-    name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
-  });
-  console.log(storage); //à supprimer
-  localStorage.setItem("Avis",JSON.stringify(storage));
-  //clean du formulaire
-  clearForm();
+    console.log(tab_identity); //à supprimer
 
-  close();
-})
+    storage.push({
+      name: inputname.value, surname: inputsurname.value, notice: inputnotice.value
+    });
+    console.log(storage); //à supprimer
+    localStorage.setItem("Avis",JSON.stringify(storage));
+    //clean du formulaire
+    clearForm();
+
+    close();
+});
+}
 
 
 //  -Fonction-  //
@@ -107,10 +109,16 @@ yr.innerText = year;
 var critics = document.querySelector(".critics");
 var closing = document.querySelector(".close");
 
-
-critics.addEventListener("click", close);
-closing.addEventListener("click", close);
+if(critics){
+  critics.addEventListener("click", close);
+  closing.addEventListener("click", close);
+}
 
 function close(){
   document.querySelector(".popup").classList.toggle("removeblock");
 }
+
+
+//Gsap
+
+import { gsap } from "gsap";
